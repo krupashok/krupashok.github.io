@@ -410,6 +410,21 @@
     }
     .exp-tech { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 1rem; }
 
+    /* -- EDUCATION -- */
+    #education { background: var(--bg); }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 960px; margin: 0 auto; align-items: start; }
+    .edu-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
+    .edu-card + .edu-card { margin-top: 1rem; }
+    .edu-degree { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .edu-school { font-size: 0.88rem; font-weight: 600; color: var(--primary); margin: 0.2rem 0 0.4rem; }
+    .edu-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.9rem; }
+    .edu-badge { display: inline-block; background: var(--primary); color: #fff; font-size: 0.72rem; font-weight: 700; border-radius: 50px; padding: 0.2rem 0.75rem; margin-bottom: 0.8rem; }
+    .edu-courses { font-size: 0.84rem; color: var(--text-muted); line-height: 1.7; }
+    .testamur { display: block; text-decoration: none; text-align: center; }
+    .testamur img { width: 100%; max-width: 340px; border: 1px solid var(--border); border-radius: 6px; box-shadow: 0 12px 34px rgba(139,99,70,0.18); transition: transform 0.2s, box-shadow 0.2s; }
+    .testamur:hover img { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(139,99,70,0.26); }
+    .testamur span { display: block; margin-top: 0.7rem; font-size: 0.82rem; font-weight: 600; color: var(--primary); }
+
     /* -- CONTACT -- */
     #contact { background: var(--gradient); }
     .contact-inner {
@@ -456,6 +471,7 @@
 
     /* -- Responsive -- */
     @media (max-width: 768px) {
+      .edu-grid { grid-template-columns: 1fr; }
       .hero-inner { flex-direction: column; text-align: center; }
       .hero-text { max-width: 100%; }
       .hero-cta { justify-content: center; }
@@ -477,6 +493,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -531,7 +548,7 @@
           </div>
           <div class="info-item">
             <div class="info-label">Degree</div>
-            <div class="info-value">Master of Data Science, Jul 2026</div>
+            <div class="info-value">Master of Data Science with Distinction, Jul 2026</div>
           </div>
           <div class="info-item">
             <div class="info-label">University</div>
@@ -757,6 +774,37 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="fade-in" style="max-width:600px; margin-bottom:3rem;">
+        <span class="section-tag">Education</span>
+        <h2 class="section-title">Education</h2>
+        <p class="section-sub">Postgraduate study in data science and an engineering degree in information science.</p>
+      </div>
+      <div class="edu-grid fade-in">
+        <div>
+          <div class="edu-card">
+            <span class="edu-badge">With Distinction</span>
+            <div class="edu-degree">Master of Data Science</div>
+            <div class="edu-school">RMIT University, Melbourne</div>
+            <div class="edu-meta">2024 - Jul 2026</div>
+            <p class="edu-courses"><strong>Coursework:</strong> Programming Fundamentals, Database Concepts, Applied Analytics, Data Wrangling, Big Data Processing, Case Studies in Data Science, Practical Data Science with Python, The Data Science Professional, Advanced Programming for Data Science, Artificial Intelligence, Algorithms and Analysis, Data Visualisation and Communication, Computational Machine Learning, Time Series Analysis, and the Data Science Postgraduate Project (industry project with Kalibre).</p>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree">Bachelor of Engineering, Information Science &amp; Engineering</div>
+            <div class="edu-school">Jyothy Institute of Technology, Bengaluru</div>
+            <div class="edu-meta">2017 - 2021</div>
+          </div>
+        </div>
+        <a class="testamur" href="rmit-testamur.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="rmit-testamur.jpg" alt="RMIT University testamur: Master of Data Science with Distinction, awarded 31 July 2026" loading="lazy" />
+          <span>RMIT testamur - view full size</span>
+        </a>
       </div>
     </div>
   </section>
